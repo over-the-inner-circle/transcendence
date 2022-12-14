@@ -1,0 +1,10 @@
+# excluded from image build (DO NOT COPY)
+
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+dist
+dump.rdbb
+test
+.env
