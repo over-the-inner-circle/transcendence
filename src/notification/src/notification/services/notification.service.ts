@@ -37,7 +37,6 @@ export class NotificationService {
     const parsed = re.exec(rk)[0].split('.');
     const params = { evType: parsed[0], dmRoomName: parsed[1] };
 
-    console.error(ev, rk);
     switch (params.evType) {
       case 'message':
         break;

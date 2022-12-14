@@ -28,15 +28,14 @@ import { StateGateway } from './state/state.gateway';
           type: 'topic',
         },
         {
-          name: process.env.RMQ_DM_TOPIC,
-          type: 'topic',
-        },
-        {
           name: process.env.RMQ_CHAT_ROOM_TOPIC,
           type: 'topic',
         },
         {
           name: process.env.RMQ_STATE_TOPIC,
+          type: 'topic',
+        },       {
+          name: process.env.RMQ_DM_TOPIC,
           type: 'topic',
         },
       ],

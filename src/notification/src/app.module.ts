@@ -33,10 +33,6 @@ import { UserService } from './user/services/user.service';
           name: process.env.RMQ_GAME_TOPIC,
           type: 'topic',
         },
-        {
-          name: 'dm.t.x',
-          type: 'topic',
-        },
       ],
       enableControllerDiscovery: true,
       connectionInitOptions: { timeout: 20000 },

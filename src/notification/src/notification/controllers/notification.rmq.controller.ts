@@ -44,7 +44,7 @@ export class NotificationRmqController {
 
   @RabbitSubscribe({
     exchange: 'dm.t.x',
-    routingKey: 'event.on.dm.*.rk',
+    routingKey: 'event.on.dm.*.*.rk',
     queue: 'event.on.dm.q',
     errorHandler: RmqErrorHandler,
   })

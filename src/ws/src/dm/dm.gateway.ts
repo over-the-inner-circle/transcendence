@@ -175,8 +175,6 @@ export class DMGateway
     });
 
     /* To all WS instances */
-    console.error(this.dmTX(), this.dmRoomRK('message', dmRoomName));
-    console.error(receiver);
     this.amqpConnection.publish(
       this.dmTX(),
       this.dmRoomRK('message', dmRoomName),
