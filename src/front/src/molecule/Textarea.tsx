@@ -16,11 +16,12 @@ function Textarea({ onSubmit }: TextareaProps) {
     <div className="flex h-fit w-full flex-row items-center justify-start">
       <textarea
         placeholder="plase input here."
-        className="h-20 w-full resize-none border-none bg-neutral-300 text-black"
+        className="h-20 w-full resize-none border-none bg-neutral-300 p-3 text-sm text-black"
         value={content}
         onChange={(e) => setContent(e.target.value)}
-        onKeyUp={(e) => {
+        onKeyDown={(e) => {
           if (e.key === 'Enter') {
+            e.preventDefault();
             sendMessage();
           }
         }}

@@ -186,13 +186,11 @@ export class MatchHistoryService {
           {
             game_info: {
               l_player_id: payload.user_id,
-              mode: GameMode.RANK,
             },
           },
           {
             game_info: {
               r_player_id: payload.user_id,
-              mode: GameMode.RANK,
             },
           },
         ],

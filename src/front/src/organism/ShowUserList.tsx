@@ -13,6 +13,7 @@ import { FloatingPortal } from '@floating-ui/react-dom-interactions';
 import { Option } from '@/molecule/OptionMenu';
 import { RoomInfo, RoomUser } from '@/states/roomInfoState';
 import Spinner from '@/atom/Spinner';
+import InviteFriendForm from '@/organism/InviteFriendToChatForm';
 
 interface ShowUserListProps {
   roomInfo: RoomInfo;
@@ -35,6 +36,7 @@ function ShowUserList({ roomInfo, close }: ShowUserListProps) {
         {roomInfo.room_name}
         <p className="h-full w-6 px-1" />
       </div>
+      <InviteFriendForm roomInfo={roomInfo} />
       {isLoading || isError ? (
         <Spinner />
       ) : (

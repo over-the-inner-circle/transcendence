@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { toast } from 'react-toastify';
 import { RoomInfo, roomInfoState } from '@/states/roomInfoState';
@@ -20,6 +20,12 @@ import Button from '@/atom/Button';
 
 const Chat = () => {
   const [roomInfo, setRoomInfo] = useRecoilState(roomInfoState); //room_id need to be null when user is not in any room
+
+  useEffect(() => {
+    return () => {
+      setRoomInfo(null);
+    }
+  }, [setRoomInfo])
 
   return (
     <SideBarLayout>

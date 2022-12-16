@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useFetcher } from '@/hooks/fetcher';
 import { type Friend } from '@/hooks/query/friends';
 import { useSetCurrentDMOpponent } from '@/hooks/dm';
+import { toast } from 'react-toastify';
 
 export interface Message {
   sender: Friend | null;
@@ -41,6 +42,9 @@ export function useSearchUser(nickname: string) {
     },
     onSuccess: () => {
       setCurrentDMOpponent(nickname);
+    },
+    onError: () => {
+      toast.error('User not found');
     },
     enabled: !!nickname,
     retry: false,

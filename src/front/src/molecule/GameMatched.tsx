@@ -229,7 +229,7 @@ const GameMatched = () => {
   }
   return (
     <div className="stop-dragging flex h-full w-full flex-col items-center justify-center font-pixel text-white">
-      <div className="flex justify-center gap-52">
+      <div className="flex w-full flex-row items-center justify-around max-w-xl">
         <GameMatchedUserInfo
           name={currentMatchInfo.lPlayerInfo.nickname}
           eloScore={currentMatchInfo.lPlayerInfo.mmr}

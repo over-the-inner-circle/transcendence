@@ -37,8 +37,10 @@ const GameWindow = () => {
     <>
       <GamePlayerInfoBar />
       <LeaveWatchingButton />
-      <div className="flex h-full min-h-0 min-w-0 items-center justify-center">
+      <div className="flex h-full min-h-0 min-w-0 flex-col items-center justify-center">
+        <div className="h-2 w-full bg-white"></div>
         <Game />
+        <div className="h-2 w-full bg-white"></div>
       </div>
     </>
   );

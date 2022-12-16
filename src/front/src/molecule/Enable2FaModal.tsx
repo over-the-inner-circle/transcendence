@@ -23,7 +23,7 @@ const TwoFaQrForm = () => {
     setIs2FaQrModalOpen(false);
   };
 
-  const update2faInfoMutation = useUpdateUser2faInfo();
+  const update2faInfoMutation = useUpdateUser2faInfo(closeModal);
   const enable2FaMutation = useEnable2FA(closeModal);
 
   const onChangeSecret = (e: React.ChangeEvent<HTMLInputElement>) => {

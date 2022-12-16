@@ -14,7 +14,7 @@ export interface MatchHistory {
   game_start: string;
   game_end: string;
   difficulty: 'easy' | 'normal' | 'hard';
-  mode: 'rank' | '???';
+  mode: 'rank' | 'friendly';
   l_player: HistoryUser | null;
   r_player: HistoryUser | null;
 }

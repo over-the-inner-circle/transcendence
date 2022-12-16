@@ -35,7 +35,7 @@ function DirectmsgList() {
 function AddDirectmsgForm() {
   const [nickname, setNickname] = useState('');
   const [query, setQuery] = useState('');
-  const { isFetching, isError } = useSearchUser(query);
+  const { isFetching } = useSearchUser(query);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -68,11 +68,6 @@ function AddDirectmsgForm() {
           Q
         </button>
       </form>
-      {isError ? (
-        <div className="flex w-full items-center justify-center bg-neutral-800 pb-2 text-xs text-red-500">
-          <p>Not Found</p>
-        </div>
-      ) : null}
     </>
   );
 }

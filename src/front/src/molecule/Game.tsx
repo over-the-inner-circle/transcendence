@@ -80,6 +80,13 @@ const Game = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      canvas.focus();
+    }
+  }, [])
+
   // 윈도우 리사이즈 시 게임 크기 조정
   useEffect(() => {
     window.addEventListener('resize', adjustGameSize);
@@ -191,6 +198,7 @@ const Game = () => {
   return (
     <div ref={containerRef} className="h-full w-full">
       <canvas
+        className="outline-none"
         tabIndex={0}
         ref={canvasRef}
         onKeyDown={(event) => handleKeyPress(event, 'keyDown')}

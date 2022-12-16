@@ -36,8 +36,8 @@ const GameFinished = () => {
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center font-pixel text-white">
-      <span className="text-4xl">{'Game Result'}</span>
-      <div className="m-20 mb-8 flex flex-row items-center justify-center gap-40">
+      <span className="text-3xl lg:text-4xl">{'Game Result'}</span>
+      <div className="mt-20 mb-8 flex w-full flex-row items-center justify-around">
         <GameMatchedUserInfo
           name={result.l_player.nickname}
           eloScore={result.l_player.mmr}
@@ -45,7 +45,7 @@ const GameFinished = () => {
           borderColor={lPlayerBorderColor()}
         />
         <div className="flex flex-col items-center justify-center gap-12">
-          <span className="whitespace-nowrap text-5xl ">
+          <span className="whitespace-nowrap text-3xl lg:text-5xl">
             {' '}
             {result.l_player.score} : {result.r_player.score}{' '}
           </span>

@@ -25,11 +25,13 @@ function UserMatchHistory({ nickname }: UserMatchHistoryProps) {
 
   return (
     <div className="pt-8">
-      <div className="py-5">최근 전적</div>
+      <div className="py-5 text-lg">Recent matches</div>
       {isError || isLoading ? (
         <div className="pb-8">
           <Spinner />
         </div>
+      ) : history.length === 0 ? (
+        <div className='py-8'>no result</div>
       ) : (
         <ul className="w-full">
           {history.map((matchInfo) => (
@@ -38,6 +40,7 @@ function UserMatchHistory({ nickname }: UserMatchHistoryProps) {
                 <p>{new Date(matchInfo.game_start).toLocaleDateString()}</p>
                 <p>({getPlayTime(matchInfo)})</p>
               </div>
+              <p className="text-xs">{matchInfo.mode}</p>
               <div className="flex flex-row items-center justify-center py-3">
                 <div className="flex w-full flex-row items-center justify-between">
                   <UserLabel

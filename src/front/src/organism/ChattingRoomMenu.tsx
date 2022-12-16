@@ -3,7 +3,6 @@ import { useDeleteRoom, useExitRoom } from '@/hooks/mutation/chat';
 import { currentUserInfoState } from '@/states/user/auth';
 import { ChattingSideBarProps } from '@/organism/ChatingRoom';
 import EditRoomInfoForm from '@/organism/EditRoomInfoForm';
-import InviteFriendForm from '@/organism/InviteFriendToChatForm';
 
 function ChattingRoomMenu({
   roomInfo,
@@ -58,9 +57,6 @@ function ChattingRoomMenu({
               <EditRoomInfoForm roomInfo={roomInfo} />
             </li>
           ) : null}
-          <li className="w-full">
-            <InviteFriendForm roomInfo={roomInfo} />
-          </li>
           <li
             className="flex h-fit w-full items-center justify-between
                         border-b border-neutral-400 bg-neutral-700 p-2 px-5"
